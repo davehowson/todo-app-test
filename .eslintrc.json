@@ -36,6 +36,8 @@
         "endOfLine": "auto"
       }
     ],
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/no-use-before-define": "warn",
+    "react/prop-types": "off"
   }
 }

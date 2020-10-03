@@ -9,7 +9,7 @@ describe('App', () => {
     container = shallow(<App />);
   });
 
-  it('renders a div', () => {
-    expect(container.find('div').length).toBeGreaterThanOrEqual(1);
+  it('renders an instance of Content', () => {
+    expect(container.find('Content').length).toBeGreaterThanOrEqual(1);
   });
 });

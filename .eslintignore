@@ -1,1 +1,5 @@
 src/serviceWorker.ts
+craco.config.js
+tailwind.js
+postcss.config.js
+src/stories
