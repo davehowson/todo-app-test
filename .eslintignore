@@ -1,5 +1,5 @@
 src/serviceWorker.ts
 craco.config.js
-tailwind.js
+tailwind.config.js
 postcss.config.js
 src/stories

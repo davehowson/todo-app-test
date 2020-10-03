@@ -1,19 +1,15 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import App from './App';
+import TodoListItem from './TodoListItem';
 
-describe('App', () => {
+describe('TodoListItem', () => {
   let container: ShallowWrapper;
 
   beforeEach(() => {
-    container = shallow(<App />);
+    container = shallow(<TodoListItem />);
   });
 
   it('should render a div', () => {
     expect(container.find('div').length).toBeGreaterThanOrEqual(1);
-  });
-
-  it('should render an instance of the TodoList', () => {
-    expect(container.find('TodoList').length).toEqual(1);
   });
 });
