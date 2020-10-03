@@ -6,7 +6,7 @@ describe('TodoListItem', () => {
   let container: ShallowWrapper;
 
   beforeEach(() => {
-    container = shallow(<TodoListItem />);
+    container = shallow(<TodoListItem id={0} description="" time={new Date()} completed={false} />);
   });
 
   it('should render a div', () => {
