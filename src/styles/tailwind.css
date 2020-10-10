@@ -22380,6 +22380,25 @@ video {
           animation: bounce 1s infinite;
 }
 
+/* Custom Styles */
+
+svg {
+  vertical-align: baseline;
+}
+
+.custom-card {
+  border-radius: 10px;
+}
+
+.todo-title--highlighted {
+  font-weight: 800;
+  color: #e70909;
+}
+
+.delete-icon {
+  color: rgb(231 9 9 / 56%);
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

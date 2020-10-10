@@ -14,6 +14,6 @@ describe('App', () => {
   });
 
   it('should render an instance of the TodoList', () => {
-    expect(container.find('TodoList').length).toEqual(1);
+    expect(container.find('TodoCard').length).toEqual(1);
   });
 });

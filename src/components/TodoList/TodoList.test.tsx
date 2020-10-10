@@ -9,7 +9,7 @@ describe('TodoList', () => {
     container = shallow(<TodoList />);
   });
 
-  it('should render an instance of Card', () => {
-    expect(container.find('Card').length).toBeGreaterThanOrEqual(1);
+  it('should render an instance of div', () => {
+    expect(container.find('div').length).toBeGreaterThanOrEqual(1);
   });
 });

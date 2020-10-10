@@ -1,3 +1,4 @@
+import notificationService from './notificationService';
 import { ITodoItem } from '../interfaces';
 
 const todos: Array<ITodoItem> = [
@@ -38,6 +39,7 @@ export default {
       const todo = todos.find((x) => x.id === id);
       if (todo) {
         todo.completed = status;
+        notificationService.success({ description: 'Successfully completed task' });
         resolve();
       } else {
         reject();

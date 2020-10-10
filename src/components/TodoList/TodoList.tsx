@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Card } from 'antd';
 import { ITodoItem } from '../../interfaces';
 import TodoListItem from '../TodoListItem/TodoListItem';
 import todoListService from '../../services/todoListService';
@@ -14,17 +13,19 @@ const TodoList: React.FC = () => {
   });
 
   return (
-    <Card title="To do List">
-      {todoList.map((todo) => (
-        <TodoListItem
-          key={todo.id}
-          id={todo.id}
-          description={todo.description}
-          time={todo.time}
-          completed={todo.completed}
-        />
-      ))}
-    </Card>
+    <div className="container p-4">
+      <div className="grid grid-cols-1 divide-y divide-gray-400">
+        {todoList.map((todo) => (
+          <TodoListItem
+            key={todo.id}
+            id={todo.id}
+            description={todo.description}
+            time={todo.time}
+            completed={todo.completed}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 

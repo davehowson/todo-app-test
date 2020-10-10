@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Card, Checkbox } from 'antd';
+import { Button, Checkbox } from 'antd';
 import { CheckboxChangeEvent } from 'antd/lib/checkbox';
+import { DeleteOutlined } from '@ant-design/icons';
 import { ITodoItem } from '../../interfaces';
 import todoListService from '../../services/todoListService';
 
@@ -23,19 +24,20 @@ const TodoListItem: React.FC<ITodoItem> = ({ id, description, time, completed })
       });
   };
   return (
-    <Card>
-      <div className="flex p-3">
-        <div className="flex-initial flex items-center mr-3">
-          <Checkbox onChange={handleTodoStatusChange} checked={completeStatus} />
-        </div>
-        <div className="flex-initial pr-3">
-          <p className="font-sans text-lg text-indigo-600">{description}</p>
-        </div>
-        <div className="flex-initial flex items-center">
-          <p className="font-sans text-sm text-gray-500 pl-4">{time.toDateString()}</p>
-        </div>
+    <div className={`grid grid-cols-12 p-3 my-1 ${completeStatus && 'line-through text-gray-400'}`}>
+      <div className="col-span-1 flex items-center">
+        <Checkbox onChange={handleTodoStatusChange} checked={completeStatus} />
       </div>
-    </Card>
+      <div className="col-span-7 flex items-center">
+        <p className="font-sans text-base">{description}</p>
+      </div>
+      <div className="col-span-3 flex items-center">
+        <p className="font-sans text-sm pl-4">{time.toDateString()}</p>
+      </div>
+      <div className="col-span-1 flex items-center">
+        <Button shape="circle" ghost icon={<DeleteOutlined className="delete-icon" />} />
+      </div>
+    </div>
   );
 };
 
