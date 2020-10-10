@@ -3,3 +3,4 @@ craco.config.js
 tailwind.config.js
 postcss.config.js
 src/stories
+*.stories.tsx

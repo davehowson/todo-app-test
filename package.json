@@ -20,7 +20,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^4.0.0-next.98",
     "tailwindcss": "^1.8.10",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "uuid": "^8.3.1"
   },
   "scripts": {
     "build:style": "tailwind build src/styles/index.css -c tailwind.config.js -o src/styles/tailwind.css",
@@ -62,6 +63,7 @@
     "@storybook/addon-essentials": "^6.0.22",
     "@storybook/addon-links": "^6.0.22",
     "@storybook/node-logger": "^6.0.22",
+    "@storybook/preset-ant-design": "0.0.1",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.22",
     "@types/enzyme": "^3.10.7",

@@ -12,17 +12,15 @@ const TodoList: React.FC = () => {
     });
   });
 
+  const removeTodoItem = (id: number) => {
+    setTodoList(todoList.filter((x) => x.id !== id));
+  };
+
   return (
     <div className="container p-4">
       <div className="grid grid-cols-1 divide-y divide-gray-400">
         {todoList.map((todo) => (
-          <TodoListItem
-            key={todo.id}
-            id={todo.id}
-            description={todo.description}
-            time={todo.time}
-            completed={todo.completed}
-          />
+          <TodoListItem key={todo.id} todo={todo} removeTodoItem={removeTodoItem} />
         ))}
       </div>
     </div>
