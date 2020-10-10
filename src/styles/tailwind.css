@@ -22390,6 +22390,11 @@ svg {
   border-radius: 10px;
 }
 
+#todoListContainer {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
 .todo-title--highlighted {
   font-weight: 800;
   color: #e70909;
